@@ -1,0 +1,28 @@
+<p>todo-list works!</p>
+
+<input #todolist type="text" />
+<br />
+<button (click)="getTodoValue(todolist.value)">Submit</button>
+<br />
+<br />
+<ul *ngFor="let item of todoList">
+    <li>
+{{item.task}} <button (click)="removeTodo(item.id)">Remove</button>
+    </li>
+</ul>
+<br />
+<br />
+<h3>{{item}}</h3>
+
+<h2>Reactive Form</h2>
+<form [formGroup] = "loginForm" (ngSubmit)="userlogin()">
+<input type="text" name="firstname" formControlName="firstname"   />
+<br />
+<span style="color: red;" *ngIf="firstname && firstname.invalid && firstname.touched">Firstname is required.</span>
+<br />
+<input type="text" name="lastname" formControlName="lastname" />
+<br />
+<span style="color: red;" *ngIf="lastname && lastname.invalid && lastname.touched">Lastname is required.</span>
+<br />
+<button [disabled]="loginForm.invalid">Submit</button>
+</form>

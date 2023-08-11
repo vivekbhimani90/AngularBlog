@@ -1,0 +1,32 @@
+<!-- <h1>Hello World {{title}}</h1>
+<h3>{{GetValue()}}</h3>
+<h2>55 + {{data}}</h2>
+<h2>{{4+5}}</h2>
+
+<app-student-list></app-student-list>
+<app-login></app-login> -->
+<app-todo-list [item] = "data"></app-todo-list>
+<br />
+<button (click) = "updateItem()">Item</button>
+
+<br />
+
+<!-- <ul *ngFor="let item of userDetails">
+   <user-list [data] = "item" (updateDataEvent) = "updateData($event)"></user-list>
+</ul> -->
+
+<!-- <user-list [data] = "userDetails"></user-list> -->
+
+<input [(ngModel)]  = "name" placeholder="Two Way Data Binding" />
+<h3 appRedEl>{{name}}</h3>
+
+<!-- <h1 appRedEl>{{2000 | number : '2.3-3'}}</h1> -->
+
+<h2>Template Driven</h2>
+<form #loginform="ngForm" (ngSubmit)="userlogin(loginform.value)">
+   <input type="text" name="firstname" placeholder="Enter Your Firstname" ngModel   />
+   <br />
+   <input type="text" name="lastname" placeholder="Enter Your Last Name" ngModel  />
+   <br />
+   <button>Submit</button>
+</form>

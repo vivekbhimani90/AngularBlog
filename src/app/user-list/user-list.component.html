@@ -1,0 +1,67 @@
+<!-- <p>user-list works!</p>
+<h2>{{displayval}}</h2>
+<button (click)="getData('Vivek')">Click Me</button>
+<br />
+<br />
+<input type="text" #box (keyup)="getData(box.value)" placeholder="keyup-event" disabled={{disable}} /><br />
+<input type="text" #box1 (keydown)="getData(box1.value)" placeholder="keydown-event" [disabled]="disable" /><br />
+<input type="text" #box2 (input)="getData(box2.value)" placeholder="input-event" /><br />
+<button (click)="getUser(box.value)">Click</button>
+<br />
+
+<button (click)="counter('Add')">Increment</button>
+<h1>{{count}}</h1>
+<button (click)="counter('Minus')">Decrement</button>
+<h1 *ngIf="show; then hey  else hello"></h1>
+<ng-template #hey>
+    <h1>Hello</h1>
+</ng-template>
+<ng-template #hello>
+    <h1>Else Hello</h1>
+</ng-template>
+
+<ng-template [ngIf]="color==='red'">
+    <h1 style="color: red;">Red Color</h1>
+</ng-template>
+<ng-template [ngIf]="color === 'green'">
+    <h1 style="color: green;">Green Color</h1>
+</ng-template>
+
+<div [ngSwitch] = "color">
+    <h1 *ngSwitchCase="'red'" style="color: red;">Red Color</h1>
+    <h1 *ngSwitchCase="'blue'" style="color: blue;">Blue Color</h1>
+    <h1 *ngSwitchCase="'yellow'" style="color: yellow;">Yellow Color</h1>
+    <h1 *ngSwitchCase="'skyblue'" style="color: skyblue;">SkyBlue Color</h1>
+    <h1 *ngSwitchCase="'gray'" style="color: gray;">Gray Color</h1>
+    <h1 *ngSwitchDefault>Unknown Color</h1>
+
+</div>
+
+
+
+<form #basicForm="ngForm" (ngSubmit)="getFormValue(basicForm.value)">
+<input type="text" ngModel name="user" placeholder="Please Enter Your Name"  />
+<br /><br />
+<input type="text" ngModel name="email" placeholder="Please Enter Your Email" />
+<br /><br />
+<input type="text" ngModel name="password" placeholder="Please Enter Your password" />    
+<br/>
+<br />
+<button>Register</button>
+</form>
+
+<ul>
+    <li>{{userData.user}}</li>
+    <li>{{userData.email}}</li>
+    <li>{{userData.password}}</li>
+</ul> -->
+
+
+<!-- <h1 *ngFor="let item of user">{{item}}</h1> -->
+<!-- <h1 *ngFor="let item of userDetails">{{item.email}}</h1> -->
+
+<li>{{data.name}}</li>
+<li>{{data.email}}</li>
+
+<input type="text" #box />
+<button (click)="updateDataEvent.emit(box.value)">Update Data</button>
